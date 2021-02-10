@@ -77,4 +77,23 @@ export const styles = StyleSheet.create({
   btn: {
     width: 100,
   },
+  containerResult: {
+    alignItems: "center",
+    justifyContent: "space-evenly",
+    width: "100%",
+    height: "70%"
+  },
+  containerResultTitle:{
+    height: "50%",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  ResultTitle:{
+    fontSize:30,
+  },
+  Result:{
+    fontSize:80,
+    fontWeight: "bold",
+    color: "#006400"
+  }
 });

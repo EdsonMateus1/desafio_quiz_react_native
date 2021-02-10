@@ -6,15 +6,17 @@ import { styles } from "../styles/styles";
 interface Props {
   onPressAnswer: Function;
   answer: string;
+  style: any;
 }
 
-export const Answer: React.FC<Props> = ({ onPressAnswer, answer }) => {
-  let [answersIdexState, setIdexanswers] = useState<number>(0);
+export const Answer: React.FC<Props> = ({ onPressAnswer, answer, style }) => {
   return (
-    <TouchableOpacity onPress={() => onPressAnswer}>
-      <View
-        style={[answersIdexState ? styles.answersContainerCheck : styles.answersContainer]}
-      >
+    <TouchableOpacity
+      onPress={() => {
+        onPressAnswer();
+      }}
+    >
+      <View style={style}>
         <Text style={styles.answers}>{answer}</Text>
       </View>
     </TouchableOpacity>
