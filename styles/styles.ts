@@ -24,9 +24,22 @@ export const styles = StyleSheet.create({
     fontSize: 22,
     letterSpacing: 1,
   },
+
   answersContainerCheck: {
     backgroundColor: "rgba(255, 155, 0, 0.8)",
-    borderColor: "rgba(255,155,0,2)",
+    marginTop: 10,
+    marginBottom: 10,
+    borderRadius: 5,
+    borderWidth: 1,
+    padding: 5,
+    shadowColor: "rgba(255, 155, 0, 0.8)",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.18,
+    shadowRadius: 1.0,
+    elevation: 2,
   },
 
   answersContainer: {
@@ -65,5 +78,3 @@ export const styles = StyleSheet.create({
     width: 100,
   },
 });
-
-
