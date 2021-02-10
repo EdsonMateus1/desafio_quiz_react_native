@@ -21,7 +21,7 @@ type Quest = {
 
 export default function App() {
   const [questState, setQuest] = useState<Array<Quest>>(quest);
-  let [resultState, setResult] = useState(true);
+  let [resultState, setResult] = useState(false);
   let [questIdexState, setIdexQuest] = useState<number>(0);
   let [answerIdexState, setIdexanswer] = useState<number>(0);
   let [questCorrectCount, setQuestCorrectCount] = useState<number>(0);
@@ -67,7 +67,7 @@ export default function App() {
           <View style={styles.containerResultTitle}>
             <Text style={styles.ResultTitle}>Você acertou</Text>
             <Text style={styles.Result}> {questCorrectCount} </Text>
-            <Text style={styles.ResultTitle}>questoes</Text>
+            <Text style={styles.ResultTitle}>questões</Text>
           </View>
           <Button
             color="#ff9b00"
@@ -102,6 +102,7 @@ export default function App() {
                   answer={answer}
                   key={answer}
                   onPressAnswer={() => {
+                    setIdexanswer(answerIdexState = index)
                     checkQuestCorrect(answer);
                     if (questIdexState < questState.length - 1) {
                       setIdexQuest(questIdexState + 1);
