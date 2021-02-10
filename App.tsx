@@ -6,7 +6,6 @@ import {
   Image,
   Button,
   TouchableOpacity,
-  ScrollView,
   SafeAreaView,
 } from "react-native";
 import { quest } from "./utils/quest_array";
@@ -24,6 +23,10 @@ export default function App() {
   let [questIdexState, setIdexQuest] = useState<number>(0);
   let [questCorrectCount, setQuestCorrectCount] = useState<number>(0);
   let [alreadyHit, setAlreadyhit] = useState(["vazio"]);
+
+  useEffect(() => {
+    setQuest(quest)
+  }, [])
 
   const checkQuestCorrect = useCallback(
     (questSelect: string) => {
@@ -50,6 +53,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <View>
+
         <View style={styles.imgContainer}>
           <Image
             style={styles.imgQuest}
@@ -62,7 +66,7 @@ export default function App() {
             {questState[questIdexState].quest}
           </Text>
 
-          {questState[questIdexState].answers.map((answer) => {
+          {questState[questIdexState].answers.map((answer,index) => {
             return (
               <TouchableOpacity
                 key={answer}
@@ -71,9 +75,10 @@ export default function App() {
                   if (questIdexState < questState.length - 1) {
                     setIdexQuest(questIdexState + 1);
                   }
+                  setIdexanswers(index);
                 }}
               >
-                <View style={styles.answersContainer}>
+                <View style={[index == answersIdexState ? styles.answersContainerCheck : styles.answersContainer]}>
                   <Text style={styles.answers}>{answer}</Text>
                 </View>
               </TouchableOpacity>
@@ -115,6 +120,7 @@ export default function App() {
               />
             )}
           </View>
+
         </View>
 
         <StatusBar style="auto" />
