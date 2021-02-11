@@ -9,8 +9,7 @@ exports.styles = react_native_1.StyleSheet.create({
         alignItems: "center"
     },
     imgContainer: {
-        marginTop: 20,
-        marginBottom: 20
+        marginBottom: 15
     },
     imgQuest: {
         width: 350,
@@ -22,14 +21,14 @@ exports.styles = react_native_1.StyleSheet.create({
         width: "100%"
     },
     questTitle: {
-        marginBottom: 10,
+        marginBottom: 8,
         fontSize: 22,
         letterSpacing: 1
     },
     answersContainerCheck: {
         backgroundColor: "rgba(255, 155, 0, 0.8)",
-        marginTop: 10,
-        marginBottom: 10,
+        marginTop: 5,
+        marginBottom: 5,
         borderRadius: 5,
         borderWidth: 1,
         padding: 5,
@@ -44,8 +43,8 @@ exports.styles = react_native_1.StyleSheet.create({
     },
     answersContainer: {
         backgroundColor: "#fff",
-        marginTop: 10,
-        marginBottom: 10,
+        marginTop: 5,
+        marginBottom: 5,
         borderRadius: 5,
         borderColor: "#fff",
         borderWidth: 1,
@@ -66,9 +65,7 @@ exports.styles = react_native_1.StyleSheet.create({
         letterSpacing: 1
     },
     btnContainer: {
-        marginTop: 8,
-        marginBottom: 8,
-        height: 50,
+        marginTop: 10,
         width: "100%",
         flexDirection: "row",
         alignItems: "center",

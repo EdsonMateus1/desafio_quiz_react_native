@@ -1,7 +1,7 @@
 export const quest = [
   {
     quest: "1.De quem é a famosa frase “Penso, logo existo”?",
-    image: require("../assets/undraw_Publish_article_re_3x8h.png"),
+    image :  require("../assets/undraw_Publish_article_re_3x8h.png"),
     correct: "Descartes",
     answers: [
       "a) Platão",

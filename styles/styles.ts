@@ -6,29 +6,32 @@ export const styles = StyleSheet.create({
     padding: 15,
     alignItems: "center",
   },
+
   imgContainer: {
-    marginTop: 20,
-    marginBottom: 20,
+    marginBottom: 15,
   },
+
   imgQuest: {
     width: 350,
     height: 220,
     resizeMode: "stretch",
   },
+
   questContainer: {
     flex: 1,
     width: "100%",
   },
+
   questTitle: {
-    marginBottom: 10,
+    marginBottom: 8,
     fontSize: 22,
     letterSpacing: 1,
   },
 
   answersContainerCheck: {
     backgroundColor: "rgba(255, 155, 0, 0.8)",
-    marginTop: 10,
-    marginBottom: 10,
+    marginTop: 5,
+    marginBottom: 5,
     borderRadius: 5,
     borderWidth: 1,
     padding: 5,
@@ -44,8 +47,8 @@ export const styles = StyleSheet.create({
 
   answersContainer: {
     backgroundColor: "#fff",
-    marginTop: 10,
-    marginBottom: 10,
+    marginTop: 5,
+    marginBottom: 5,
     borderRadius: 5,
     borderColor: "#fff",
     borderWidth: 1,
@@ -65,35 +68,39 @@ export const styles = StyleSheet.create({
     fontSize: 19,
     letterSpacing: 1,
   },
+
   btnContainer: {
-    marginTop: 8,
-    marginBottom: 8,
-    height: 50,
+    marginTop: 10,
     width: "100%",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-evenly",
   },
+
   btn: {
     width: 100,
   },
+
   containerResult: {
     alignItems: "center",
     justifyContent: "space-evenly",
     width: "100%",
-    height: "70%"
+    height: "70%",
   },
-  containerResultTitle:{
+  
+  containerResultTitle: {
     height: "50%",
     alignItems: "center",
     justifyContent: "space-between",
   },
-  ResultTitle:{
-    fontSize:30,
+
+  ResultTitle: {
+    fontSize: 30,
   },
-  Result:{
-    fontSize:80,
+
+  Result: {
+    fontSize: 80,
     fontWeight: "bold",
-    color: "#006400"
-  }
+    color: "#006400",
+  },
 });
