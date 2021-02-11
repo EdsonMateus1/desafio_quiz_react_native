@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { QuestViews } from "./views/ques_views";
+import { QuestViews } from "./views/Quests/quests_views";
 import { Home } from "./views/Home/home_views";
 
 const Stack = createStackNavigator();

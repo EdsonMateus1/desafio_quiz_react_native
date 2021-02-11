@@ -2,9 +2,9 @@ import React, { useState, useEffect, useCallback } from "react";
 import { Text, View, Image, Button, SafeAreaView } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
-import { quest } from "../utils/quest_array";
-import { styles } from "../styles/styles";
-import { Answer } from "../widgets/answer";
+import { quest } from "../../utils/quest_array";
+import { styles } from "../../styles/styles";
+import { Answer } from "../../widgets/answer";
 
 type Quest = {
   quest: string;
