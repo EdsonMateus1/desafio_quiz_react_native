@@ -1,5 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Text, View, Image, Button, SafeAreaView } from "react-native";
+import {
+  Text,
+  View,
+  Image,
+  Button,
+  SafeAreaView,
+  ProgressBarAndroidBase,
+} from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 import { quest } from "../../utils/quest_array";
@@ -97,7 +104,7 @@ export const QuestViews: React.FC = () => {
                   answer={answer}
                   key={answer}
                   onPressAnswer={() => {
-                    setIdexanswer((answerIdexState = index));
+                    setIdexanswer((answerIdexState = index)); // implementar estilo na pergunta que foi selecionada
                     checkQuestCorrect(answer);
                     if (questIdexState < questState.length - 1) {
                       setIdexQuest(questIdexState + 1);
@@ -145,6 +152,7 @@ export const QuestViews: React.FC = () => {
           </View>
         </View>
       )}
+
       <StatusBar style="auto" />
     </SafeAreaView>
   );

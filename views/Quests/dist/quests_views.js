@@ -70,7 +70,7 @@ exports.QuestViews = function () {
                                 ? styles_1.styles.answersContainerCheck
                                 : styles_1.styles.answersContainer,
                         ], answer: answer, key: answer, onPressAnswer: function () {
-                            setIdexanswer((answerIdexState = index));
+                            setIdexanswer((answerIdexState = index)); // implementar estilo na pergunta que foi selecionada
                             checkQuestCorrect(answer);
                             if (questIdexState < questState.length - 1) {
                                 setIdexQuest(questIdexState + 1);
