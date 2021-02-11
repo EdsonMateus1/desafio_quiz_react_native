@@ -1,12 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import {
-  Text,
-  View,
-  Image,
-  Button,
-  SafeAreaView,
-  ProgressBarAndroidBase,
-} from "react-native";
+import { Text, View, Image, Button, SafeAreaView } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 import { quest } from "../../utils/quest_array";
@@ -24,7 +17,6 @@ export const QuestViews: React.FC = () => {
   const [questState, setQuest] = useState<Array<Quest>>(quest);
   let [resultState, setResult] = useState(false);
   let [questIdexState, setIdexQuest] = useState<number>(0);
-  let [answerIdexState, setIdexanswer] = useState<number>(0);
   let [questCorrectCount, setQuestCorrectCount] = useState<number>(0);
   let [alreadyHit, setAlreadyhit] = useState(["vazio"]);
 
@@ -95,16 +87,10 @@ export const QuestViews: React.FC = () => {
             {questState[questIdexState].answers.map((answer, index) => {
               return (
                 <Answer
-                  style={[
-                    // implementar estilo na pergunta que foi selecionada
-                    false
-                      ? styles.answersContainerCheck
-                      : styles.answersContainer,
-                  ]}
                   answer={answer}
                   key={answer}
                   onPressAnswer={() => {
-                    setIdexanswer((answerIdexState = index)); // implementar estilo na pergunta que foi selecionada
+                    // implementar estilo na pergunta que foi selecionada
                     checkQuestCorrect(answer);
                     if (questIdexState < questState.length - 1) {
                       setIdexQuest(questIdexState + 1);

@@ -18,9 +18,8 @@ exports.QuestViews = function () {
     var _a = react_1.useState(quest_array_1.quest), questState = _a[0], setQuest = _a[1];
     var _b = react_1.useState(false), resultState = _b[0], setResult = _b[1];
     var _c = react_1.useState(0), questIdexState = _c[0], setIdexQuest = _c[1];
-    var _d = react_1.useState(0), answerIdexState = _d[0], setIdexanswer = _d[1];
-    var _e = react_1.useState(0), questCorrectCount = _e[0], setQuestCorrectCount = _e[1];
-    var _f = react_1.useState(["vazio"]), alreadyHit = _f[0], setAlreadyhit = _f[1];
+    var _d = react_1.useState(0), questCorrectCount = _d[0], setQuestCorrectCount = _d[1];
+    var _e = react_1.useState(["vazio"]), alreadyHit = _e[0], setAlreadyhit = _e[1];
     react_1.useEffect(function () {
         setQuest(quest_array_1.quest);
     }, []);
@@ -64,13 +63,8 @@ exports.QuestViews = function () {
             react_1["default"].createElement(react_native_1.View, { style: styles_1.styles.questContainer },
                 react_1["default"].createElement(react_native_1.Text, { style: styles_1.styles.questTitle }, questState[questIdexState].quest),
                 questState[questIdexState].answers.map(function (answer, index) {
-                    return (react_1["default"].createElement(answer_1.Answer, { style: [
+                    return (react_1["default"].createElement(answer_1.Answer, { answer: answer, key: answer, onPressAnswer: function () {
                             // implementar estilo na pergunta que foi selecionada
-                            false
-                                ? styles_1.styles.answersContainerCheck
-                                : styles_1.styles.answersContainer,
-                        ], answer: answer, key: answer, onPressAnswer: function () {
-                            setIdexanswer((answerIdexState = index)); // implementar estilo na pergunta que foi selecionada
                             checkQuestCorrect(answer);
                             if (questIdexState < questState.length - 1) {
                                 setIdexQuest(questIdexState + 1);

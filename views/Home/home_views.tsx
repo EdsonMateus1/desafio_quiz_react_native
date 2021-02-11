@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, View, Button } from "react-native";
 import { styles } from "./styles";
+import { StatusBar } from "expo-status-bar";
 
 interface Props {
   navigation: any;
@@ -24,6 +25,7 @@ export const Home: React.FC<Props> = ({ navigation }) => {
           />
         </View>
       </View>
+      <StatusBar style="auto" />
     </View>
   );
 };

@@ -6,17 +6,20 @@ import { styles } from "../styles/styles";
 interface Props {
   onPressAnswer: Function;
   answer: string;
-  style: any;
 }
 
-export const Answer: React.FC<Props> = ({ onPressAnswer, answer, style }) => {
+export const Answer: React.FC<Props> = ({ onPressAnswer, answer }) => {
+  // let [answerState, setanswer] = useState(answer);  // implementar estilo na pergunta que foi selecionada
+
   return (
     <TouchableOpacity
       onPress={() => {
         onPressAnswer();
       }}
     >
-      <View style={style}>
+      <View
+        style={false ? styles.answersContainerCheck : styles.answersContainer} // implementar estilo na pergunta que foi selecionada
+      >
         <Text style={styles.answers}>{answer}</Text>
       </View>
     </TouchableOpacity>
